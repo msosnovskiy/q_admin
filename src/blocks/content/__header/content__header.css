@@ -1,0 +1,7 @@
+.content__header {
+  min-height: 78px;
+  background-color: #16161F;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}

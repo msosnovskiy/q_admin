@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./pages/index.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+  <link rel="manifest" href="./images/site.webmanifest">
+  <link rel="mask-icon" href="./images/safari-pinned-tab.svg" color="#16161f">
+  <link rel="shortcut icon" href="./images/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="./images/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <title>QUSI</title>
+</head>
+
+<body>
+  <div class="page">
+    <section class="menu">
+      <button class="menu__icon-wrapper" id="buregerIcon">
+        <div class="menu__icon menu__icon_active"></div>
+      </button>
+      <p class="logo">QUSI</p>
+      <ul class="menu__lists">
+        <li>
+          <a href="#" class="menu__link menu__link_active">
+            <svg class="menu__list-img">
+              <use xlink:href="#users"></use>
+            </svg>
+            <span class="menu__text menu__text_visible">Пользователи</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="menu__link">
+            <svg class="menu__list-img">
+              <use xlink:href="#activedirectory"></use>
+            </svg>
+            <span class="menu__text menu__text_visible">Active&nbsp;Directory</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="menu__link">
+            <svg class="menu__list-img">
+              <use xlink:href="#sophi"></use>
+            </svg>
+            <span class="menu__text menu__text_visible">Sophi</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="menu__link">
+            <svg class="menu__list-img">
+              <use xlink:href="#settings"></use>
+            </svg>
+            <span class="menu__text menu__text_visible">Настройки</span>
+          </a>
+        </li>
+      </ul>
+      <button class="menu__button" id="logoutButton">
+        <span class="menu__button-text menu__button-text_visible">Выход</span>
+        <div class="menu__button-img">
+          <div class="menu__button-img_dor"></div>
+          <div class="menu__button-img_arrow"></div>
+        </div>
+      </button>
+    </section>
+
+    <section class="content">
+      <div class="content__header">
+        <h1 class="content__title">Пользователи</h1>
+        <button class="button"><span class="button_add"></span>
+          Создать</button>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="svg">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <symbol id="users" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M16 11C17.66 11 18.99 9.66 18.99 8C18.99 6.34 17.66 5 16 5C14.34 5 13 6.34 13 8C13 9.66 14.34 11 16 11ZM8.00001 11C9.66002 11 10.99 9.66 10.99 8C10.99 6.34 9.66002 5 8.00001 5C6.34001 5 5.00002 6.34 5.00002 8C5.00002 9.66 6.34001 11 8.00001 11ZM8.00001 13C5.67001 13 1.00002 14.17 1.00002 16.5V19H15V16.5C15 14.17 10.33 13 8.00001 13ZM16 13C15.71 13 15.38 13.02 15.03 13.05C16.19 13.89 17 15.02 17 16.5V19H23V16.5C23 14.17 18.33 13 16 13Z" />
+      </symbol>
+      <symbol id="activedirectory" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M20 6H12L10 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V8C22 6.9 21.1 6 20 6ZM14 16H6V14H14V16ZM18 12H6V10H18V12Z" />
+      </symbol>
+      <symbol id="sophi" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M9.4 16.6L4.8 12L9.4 7.4L8 6L2 12L8 18L9.4 16.6ZM14.6 16.6L19.2 12L14.6 7.4L16 6L22 12L16 18L14.6 16.6Z" />
+      </symbol>
+      <symbol id="settings" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M3 17V19H9V17H3ZM3 5V7H13V5H3ZM13 21V19H21V17H13V15H11V21H13ZM7 9V11H3V13H7V15H9V9H7ZM21 13V11H11V13H21ZM15 9H17V7H21V5H17V3H15V9Z" />
+      </symbol>
+    </svg>
+  </div>
+
+
+  <script src="./scripts/components/Header.js"></script>
+  <script src="./scripts/components/Button.js"></script>
+  <script src="./scripts/components/Users.js"></script>
+  <script src="./scripts/components/Content.js"></script>
+  <script src="./scripts/components/MenuSwitcher.js"></script>
+  <script src="./scripts/index.js"></script>
+
+</body>
+
+</html>

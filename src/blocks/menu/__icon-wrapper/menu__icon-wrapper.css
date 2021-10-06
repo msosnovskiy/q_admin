@@ -1,0 +1,16 @@
+.menu__icon-wrapper {
+  width: 32px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 26px;
+  right: 26px;
+}
+
+.menu__icon-wrapper:hover {
+  cursor: pointer;
+}

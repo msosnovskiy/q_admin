@@ -1,0 +1,72 @@
+.menu__link {
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  align-items: center;
+  min-height: 54px;
+  padding: 16px 30px 16px 30px;
+  color: #9296A0;
+}
+
+.menu__link svg {
+  fill: #9296A0;
+}
+
+.menu__link:hover {
+  background: rgba(81, 99, 121, 0.2);
+  color: #E4EBF6;
+  cursor: pointer;
+  transition-duration: .2s;
+}
+
+.menu__link:hover .menu__text {
+  color: #E4EBF6;
+}
+
+.menu__link:hover svg {
+  fill: #E4EBF6;
+}
+
+.menu__link_active {
+  background: rgba(81, 99, 121, 0.2);
+  color: #E4EBF6;
+  cursor: pointer;
+  transition-duration: .2s;
+  position: relative;
+}
+
+.menu__link_active svg {
+  fill: #E4EBF6;
+}
+
+.menu__link_active .menu__text {
+  color: #E4EBF6;
+}
+
+.menu__link_active::after {
+  content: "";
+  width: 0px;
+  height: 100%;
+  border-left: 6px solid #0381EB;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-radius: 0 84px 84px 0;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+.menu__link:focus {
+  background: rgba(81, 99, 121, 0.2);
+  color: #E4EBF6;
+  cursor: pointer;
+  transition-duration: .2s;
+}
+
+.menu__link:focus .menu__text {
+  color: #E4EBF6;
+}
+
+.menu__link:focus svg {
+  fill: #E4EBF6;
+}

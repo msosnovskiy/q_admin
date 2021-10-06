@@ -1,0 +1,48 @@
+@import url(./__icon-wrapper/menu__icon-wrapper.css);
+@import url(./__icon/menu__icon.css);
+@import url(./__lists/menu__lists.css);
+@import url(./__link/menu__link.css);
+@import url(./__list-img/menu__list-img.css);
+@import url(./__text/menu__text.css);
+@import url(./__button/menu__button.css);
+@import url(./__button-text/menu__button-text.css);
+@import url(./__button-img/menu__button-img.css);
+
+@keyframes smallMenu {
+  0% {
+    max-width: 320px;
+  }
+  100% {
+    max-width: 84px;
+  }
+}
+
+@keyframes fullMenu {
+  0% {
+    max-width: 84px;
+  }
+  100% {
+    max-width: 320px;
+  }
+}
+
+.menu {
+  max-width: 320px;
+  width: 100%;
+  height: 100%;
+  background-color: #16161F;
+  position: relative;
+  animation: none;
+}
+
+.menu_small {
+  max-width: 84px;
+  animation: smallMenu ease-in-out .3s;
+}
+
+.menu_full {
+  max-width: 320px;
+  animation: fullMenu ease-in-out .3s;
+}
+
+

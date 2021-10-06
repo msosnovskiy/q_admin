@@ -1,0 +1,23 @@
+.menu__button {
+  padding: 8px;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background: transparent;
+  border: none;
+  color: #E4EBF6;
+  display: flex;
+  align-items: center;
+}
+
+.menu__button:hover {
+  cursor: pointer;
+}
+
+.menu__button:hover .menu__button-img_arrow{
+  left: 8px;
+  transition-duration: 0.15s;
+  transition-timing-function:ease-in;
+}
+

@@ -1,0 +1,23 @@
+@import url(./_add/button_add.css);
+
+.button {
+  font-size: 18px;
+  line-height: 22px;
+  padding: 10px 16px;
+  background-color: #0381EB;
+  color: #E4EBF6;
+  border-radius: 8px;
+  border: 2px solid #0381EB;
+  display: flex;
+  justify-self: center;
+  margin: 15px auto;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  transition-duration: .2s;
+  border: 2px solid #0381EB;
+  color: #0381EB;
+}
+

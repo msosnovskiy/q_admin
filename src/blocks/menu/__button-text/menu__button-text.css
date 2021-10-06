@@ -1,0 +1,9 @@
+.menu__button-text {
+  margin-right: 10px;
+  display: none;
+}
+
+.menu__button-text_visible {
+  display: block;
+  animation: showText ease-in-out 0.3s;
+}

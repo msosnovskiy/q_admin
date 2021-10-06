@@ -1,0 +1,32 @@
+.button_add {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  padding-right: 28px;
+}
+
+.button_add::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  background-color: #E4EBF6;
+  top: 10px;
+  left: 0;
+}
+
+.button_add::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  background-color: #E4EBF6;
+  top: 10px;
+  left: 0;
+  transform: rotate(90deg);
+}
+
+.button:hover .button_add::after, .button:hover .button_add::before {
+  background-color: #0381EB;
+  transition-duration: .2s;
+}

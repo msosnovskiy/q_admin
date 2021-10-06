@@ -1,0 +1,12 @@
+.page {
+  height: 100vh;
+  background-color: #C7CBCF;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #E4EBF6;
+  line-height: 22px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+}

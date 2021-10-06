@@ -1,0 +1,25 @@
+@keyframes showText {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.menu__text {
+  color: #9296A0;
+  max-width: 200px;
+  text-decoration: none;
+  margin: 0 0 0 20px;
+  padding: 0;
+  display: none;
+}
+
+.menu__text_visible {
+  display: block;
+  animation: showText ease-in-out 0.3s;
+}

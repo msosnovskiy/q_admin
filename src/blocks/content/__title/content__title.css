@@ -1,0 +1,8 @@
+.content__title {
+  margin: 0;
+  margin-left: 40px;
+  max-width: 400px;
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 400;
+}

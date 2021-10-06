@@ -1,0 +1,6 @@
+@import url(./__header/content__header.css);
+@import url(./__title/content__title.css);
+
+.content {
+  width: 100%;
+}

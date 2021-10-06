@@ -1,0 +1,13 @@
+.logo {
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  margin: 0;
+  text-transform: uppercase;
+  padding: 90px 30px 30px;
+}
+
+.logo:first-letter {
+  color: #0381EB;
+}
