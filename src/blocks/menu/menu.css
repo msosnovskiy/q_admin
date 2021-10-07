@@ -8,6 +8,18 @@
 @import url(./__button-text/menu__button-text.css);
 @import url(./__button-img/menu__button-img.css);
 
+@keyframes showText {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes smallMenu {
   0% {
     max-width: 320px;
@@ -37,11 +49,17 @@
 
 .menu_small {
   max-width: 84px;
+}
+
+.menu_small-animation {
   animation: smallMenu ease-in-out .3s;
 }
 
 .menu_full {
   max-width: 320px;
+}
+
+.menu_full-animation {
   animation: fullMenu ease-in-out .3s;
 }
 

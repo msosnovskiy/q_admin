@@ -23,15 +23,7 @@ const button = (...arg) => new Button(...arg);
 const users = new Users(contentContainer, header, button);
 
 const menuSwitcher = new MenuSwitcher(menuContainer, buregerIcon, logo, logoutButton);
-// const content = new Content(contentContainer)
 
 // Доюавление слушателей на меню
 menuSwitcher.setEventListener();
 
-// создание страницы Users
-
-
-
-
-
-// !!!! Разделить переключение меню switchMenu. По нажатию на кнопку вешать классы  menu_small и menu_full. А просто при загрузке выставлять ширину через стиль

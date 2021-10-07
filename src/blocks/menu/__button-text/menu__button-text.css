@@ -5,5 +5,9 @@
 
 .menu__button-text_visible {
   display: block;
+}
+
+.menu__button-text_animation {
+  display: block;
   animation: showText ease-in-out 0.3s;
 }

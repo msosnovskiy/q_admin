@@ -9,6 +9,7 @@ class MenuSwitcher {
     this.menuTexts = this.menu.querySelectorAll('.menu__text');
     this.activeLink = this.menu.querySelector('.menu__link_active');
     this.menuLinks = this.menu.querySelectorAll('.menu__link');
+    this.firstLoaded = true;
   }
 
   // _getMenuStateFromLocalstorage() {
@@ -37,7 +38,7 @@ class MenuSwitcher {
   //   }
   //   else localStorage.setItem('menu', JSON.stringify({ state: 'full', firstLoaded: false }));
   // }
-  
+
   _changeMenuStateFromLocalStorage(state) {
     if (state == 'full') {
       localStorage.setItem('menu', 'small');
@@ -45,7 +46,7 @@ class MenuSwitcher {
     else localStorage.setItem('menu', 'full');
   }
 
-  _setMenuState(state) {
+  _setFirstMenuState(state) {
     if (state === 'full') {
       this.menu.classList.remove('menu_small');
       this.menu.classList.add('menu_full');
@@ -54,9 +55,26 @@ class MenuSwitcher {
       this.menu.classList.remove('menu_full');
       this.menu.classList.add('menu_small');
     }
+    this.firstLoaded = true;
   }
 
-  _setBurgerState(state) {
+  _setMenuStateByBurgerButton(state) {
+    if (state === 'full') {
+      this.menu.classList.remove('menu_small');
+      this.menu.classList.remove('menu_small-animation');
+      this.menu.classList.add('menu_full');
+      this.menu.classList.add('menu_full-animation');
+    }
+    else {
+      this.menu.classList.remove('menu_full');
+      this.menu.classList.remove('menu_full-animation');
+      this.menu.classList.add('menu_small');
+      this.menu.classList.add('menu_small-animation');
+    }
+    this.firstLoaded = false;
+  }
+
+  _setBurgerButtonState(state) {
     if (state === 'full') {
       this.burgerIcon.classList.add('menu__icon_active');
     }
@@ -78,27 +96,44 @@ class MenuSwitcher {
 
   _setLinksState(state) {
     this.menuTexts.forEach((item) => {
-      if (state === 'full') {
+      if (state === 'full' && this.firstLoaded) {
         item.classList.add('menu__text_visible');
       }
+      else if (state === 'full' && !this.firstLoaded) {
+        item.classList.add('menu__text_visible');
+        item.classList.add('menu__text_animation');
+      }
       else {
-        item.classList.remove('menu__text_visible')
+        item.classList.remove('menu__text_visible');
+        item.classList.remove('menu__text_animation');
       };
     })
   }
 
   _setLogoutButtonState(state) {
     const logoutButtonText = this.logoutButton.querySelector('.menu__button-text');
-    if (state === 'full') {
+    if (state === 'full' && this.firstLoaded) {
       logoutButtonText.classList.add('menu__button-text_visible');
     }
-    else logoutButtonText.classList.remove('menu__button-text_visible');
+    if (state === 'full' && !this.firstLoaded) {
+      logoutButtonText.classList.add('menu__button-text_visible');
+      logoutButtonText.classList.add('menu__button-text_animation');
+    }
+    else {
+      logoutButtonText.classList.remove('menu__button-text_visible');
+      logoutButtonText.classList.remove('menu__button-text_animation');
+    };
   }
 
-  switchMenu() {
+  _switchMenu() {
     let state = this._getMenuStateFromLocalstorage();
-    this._setMenuState(state);
-    this._setBurgerState(state);
+    if (this.menu.classList.contains('menu_small') || this.menu.classList.contains('menu_full')) {
+      this._setMenuStateByBurgerButton(state);
+    }
+    else {
+      this._setFirstMenuState(state);
+    }
+    this._setBurgerButtonState(state);
     this._setLogoState(state);
     this._setLinksState(state);
     this._setLogoutButtonState(state);
@@ -107,11 +142,11 @@ class MenuSwitcher {
   setEventListener() {
 
     //Определение вида меню при первичной загрузке страницы
-    this.switchMenu();
+    this._switchMenu();
 
     this.burgerButton.addEventListener('click', () => {
       this._changeMenuStateFromLocalStorage(this._getMenuStateFromLocalstorage());
-      this.switchMenu();
+      this._switchMenu();
     })
 
     this.menuLinks.forEach((item) => {
