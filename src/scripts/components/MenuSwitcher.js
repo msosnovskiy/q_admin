@@ -114,14 +114,17 @@ class MenuSwitcher {
     const logoutButtonText = this.logoutButton.querySelector('.menu__button-text');
     if (state === 'full' && this.firstLoaded) {
       logoutButtonText.classList.add('menu__button-text_visible');
+      console.log('1');
     }
-    if (state === 'full' && !this.firstLoaded) {
+    else if (state === 'full' && !this.firstLoaded) {
       logoutButtonText.classList.add('menu__button-text_visible');
       logoutButtonText.classList.add('menu__button-text_animation');
+      console.log('2');
     }
     else {
       logoutButtonText.classList.remove('menu__button-text_visible');
       logoutButtonText.classList.remove('menu__button-text_animation');
+      console.log('3');
     };
   }
 
